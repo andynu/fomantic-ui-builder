@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/tidy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.js"></script>
+    <script src="js/app.mjs" type="module"></script>
+</head>
+<body>
+<div class="ui padded grid">
+    <div class="row">
+        <div class="two wide column">
+
+            <!-- component list -->
+            <div id='components' class="ui inverted vertical menu">
+            </div>
+            <button type="button" id="toggle-section-borders" class="ui basic button">Toggle Section Borders</button>
+
+        </div>
+        <div class="fourteen wide column">
+
+            <!-- tabs -->
+            <div class="ui top attached tabular menu default">
+                <a class="active item" data-tab="design">Design</a>
+                <a class="item" data-tab="markup">Markup</a>
+            </div>
+
+            <!-- design -->
+            <div class="ui bottom attached active tab segment" data-tab="design">
+                <section id='template'></section>
+            </div>
+
+            <!-- markup -->
+            <div class="ui bottom attached tab segment" data-tab="markup">
+                <div class="ui grid">
+                    <div class="row">
+                        <div class="eight wide column">
+                            <pre id="markup"></pre>
+                        </div>
+                        <div class="eight wide column">
+                            <pre id="haml"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
